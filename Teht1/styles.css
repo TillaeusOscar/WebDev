@@ -118,7 +118,7 @@ body {
     justify-content: center; /* Keskittää sisältö pystysuunnassa */
     min-height: 100vh; /* Varmistaa, että sisältö on keskitetty koko näkymän korkeudelle */
     margin: 0; /* Poistaa oletusmarginaalit */
-    background-color: #9c4973; /* Vaalea harmaa tausta */
+    background-color: lightblue; /* Vaihdettiin taustan väri. */
     color: #1d1d1d; /* Tummanharmaa teksti */
 }
 
