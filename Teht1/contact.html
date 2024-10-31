@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Yhdistää tyylitiedoston -->
+    <style>
+        /* Välit kenttien väliin */
+        form {
+            max-width: 400px;
+            margin: 20px auto; /* Keskittää lomakkeen */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input, textarea, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #29b973; /* Napin väri */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27a364; /* Napin hover-väri */
+        }
+
+        /* Keskittää otsikon ja lomakkeen */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Keskittää sisältö vaakasuunnassa */
+            justify-content: center; /* Keskittää sisältö pystysuunnassa */
+            min-height: 100vh; /* Varmistaa, että sisältö on keskitetty koko näkymän korkeudelle */
+            margin: 0; /* Poistaa oletusmarginaalit */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Lisää tilaa otsikon alle */
+        }
+
+        /* Navigaatiopalkin tyyli */
+        .navbar {
+            background: #ff6f61; /* Vaaleanpunainen taustaväri navbarille */
+            height: 80px; /* Korkeus */
+        }
+
+        .navbar__menu {
+            list-style: none; /* Poistaa listatyylin */
+            display: flex; /* Näyttää valikkokohdat rivinä */
+            gap: 20px; /* Välit linkkien välille */
+            margin-left: auto; /* Työntää logon vasemmalle ja linkit oikealle */
+        }
+
+        .navbar__links {
+            color: #fff; /* Tekstiväri */
+            text-decoration: none; /* Poistaa alleviivauksen */
+            padding: 8px 12px; /* Sisennys */
+            transition: color 0.3s ease; /* Animointi */
+        }
+
+        .navbar__links:hover {
+            color: #0056b3; /* Hover-tilan väri */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigaatiopalkki -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <h2 id="navbar__logo">Lightning McQueen</h2>
+            <ul class="navbar__menu">
+                <li><a class="navbar__links" href="index.html">Home</a></li>
+                <li><a class="navbar__links" href="cv.html">CV</a></li>
+                <li><a class="navbar__links" href="hobbies.html">Hobbies</a></li>
+                <li><a class="navbar__links" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Contact Me</h1>
+    
+    <form action="#" method="post"> <!-- Lomaketta ei tarvitse lähettää -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="source">How did you know about my page?</label>
+        <select id="source" name="source" required>
+            <option value="google">Google</option>
+            <option value="friend">From a friend</option>
+            <option value="linkedin">From LinkedIn</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
